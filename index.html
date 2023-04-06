@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+  <title>Responsive Screen</title>
+</head>
+
+<body>
+	<header>
+		<div class="navbar">
+			<div class="logo"> <a href="#">Web Dev Creative</a></div>
+			<ul class="links">
+				<li> <a href="#">Início</a></li>
+				<li> <a href="#">Sobre</a></li>
+				<li> <a href="#">Serviços</a></li>
+				<li> <a href="#">Contato</a></li>
+			</ul>
+			<a href="#" class="action_button">Iniciar</a>
+			<div class="toggle_button">
+				<i class="fa-solid fa-bars"></i>
+			</div>
+		</div>
+
+		<div class="box_nav aberto">
+			<li> <a href="#">Início</a></li>
+			<li> <a href="#">Sobre</a></li>
+			<li> <a href="#">Serviços</a></li>
+			<li> <a href="#">Contato</a></li>
+			<li><a href="#" class="action_button">Iniciar</a></li>
+		</div>
+	</header>
+
+	<main>
+		<section class="main">
+			<h1>Bem Vindo</h1>
+			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit,sed do eiusmod <br/>tempor incididunt ut labore et dolore magna aliqua. </p>
+		</section>
+	</main>
+  
+	<script>
+		const toggleButton = document.querySelector('.toggle_button')
+		const toggleIconButton = document.querySelector('.toggle_button i')
+		const boxNav = document.querySelector('.box_nav')
+
+		toggleButton.onclick = function () {
+			boxNav.classList.toggle('aberto')
+			const Aberto = boxNav.classList.contains('aberto')
+
+			toggleIconButton.classList = Aberto
+				?'fa-solid fa-xmark'
+				:'fa-solid fa-bars'
+		}
+	</script>
+
+</body>
+</html>
